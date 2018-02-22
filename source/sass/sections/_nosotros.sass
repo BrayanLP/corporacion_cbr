@@ -1,0 +1,80 @@
+#nosotros
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    padding: 3rem 2rem
+    background: #f9f9f9
+    .titulo 
+        grid-template-columns: 1fr 1fr
+        align-items: center
+        justify-items: center
+        padding-bottom: 3rem
+        h2
+            @extend .color1
+        h5
+            @extend .color2
+        p
+            @extend .color3
+            text-align: justify
+            font-weight: 100
+    #timeline,.video,.titulo
+        display: grid
+        grid-column: 1 /span 4
+    .video
+        grid-template-columns: 60% 1fr
+        background: #ffffff
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+        // padding: 2rem
+        margin: 2rem 1rem 
+        height: 400px
+        // align-items: center
+        // justify-items: center
+        div:nth-child(1)
+            @extend .bg-c2
+            text-align: center 
+            line-height: 400px
+            a
+                height: 100%
+                display: block
+                span
+                    font-size: 40px
+                    color: #ffffff
+        div:nth-child(2)
+            padding: 2rem
+        ul.inline
+            li
+                display: inline-block
+                a
+                    padding: 1rem
+                    font-size: 16px
+                    @extend .color2
+    .cont
+        background: #ffffff
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2)
+        padding: 1rem 2rem
+        margin: 1rem
+        position: relative
+        height: 150px
+        h4
+            font-size: 50px
+            font-weight: 300
+            @extend .color1
+            margin: 0
+        span
+            @extend .color3
+        .flot
+            position: absolute
+            top: 20px
+            right: 30px
+            font-size: 40px
+            @extend .color2
+    .mapa
+        grid-column: 1 / span 4
+        display: grid
+        grid-gap: 1rem
+        padding: 0 1rem
+        grid-template-columns: 1fr 1fr 1fr
+        h6
+            font-size: 15px
+            @extend .color2
+        p
+            @extend .color3
+

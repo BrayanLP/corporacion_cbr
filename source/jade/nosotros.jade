@@ -1,0 +1,22 @@
+doctype html
+html(lang="es")
+    - var home = true
+    - var organization = true
+    include _partials/head
+    body.home
+        include _partials/mixins 
+        main#wrapper.home  
+
+            //- HEADER DEL SITIO
+            include _modules/header
+
+            //- MENU
+            include _modules/menu
+
+            //- CARGA
+            include _layouts/nosotros
+            include _modules/footer
+            include _partials/footer
+ 
+ 
+

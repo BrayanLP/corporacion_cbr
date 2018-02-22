@@ -1,0 +1,71 @@
+/* MODIFICACIONES MENU */
+#menu
+    height: 90px
+nav
+    // background: linear-gradient(to left, $color1 , $color2) !important
+    background: #ffffff
+    height: 90px
+    line-height: 45px
+    padding: 0 2rem
+    z-index: 10
+    box-shadow: 0 0 10px rgba(0,0,0,0.2)
+    border-bottom: 7px solid red
+    .brand-logo
+        img
+            margin-top: 10px
+    ul
+        li
+            &:hover
+                background: transparent !important
+            a
+                @extend  .color2
+                font-weight: bold
+                font-size: 13px
+                @include transition(0.3s all)
+                // text-transform: uppercase
+                &:hover
+                    @extend .bg-c1
+                    color: #ffffff
+                    // background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%)
+                    // @extend .white
+                &.active
+                    @extend .bg-c1
+                    color: #ffffff
+                    // background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%)
+                    // @extend .white
+                &.call
+                    font-size: 25px
+                    font-weight: 300 !important
+                    &:hover
+                        background: transparent !important
+                        @extend .color1
+                    @extend .color1
+                    b
+                        font-weight: bold
+                &.redes
+                    @extend .color1
+                    font-size: 30px
+                    padding: 0 10px
+                    span
+                        display: block
+                        height: 45px
+                        padding-top: 7px
+            ul.dropdown-content
+                display: initial
+                top: 64px !important
+                // background: linear-gradient(to left, $color1 , $color2) !important
+                &:hover
+                    // background: linear-gradient(to left, $color1 , $color2) !important
+                li
+                    &:hover
+                        background: initial !important
+                    a
+                        // color: $white
+                        &:hover
+                            // background: initial 
+        &#nav-mobile
+            margin-top: 20px
+ 
+
+
+                

@@ -1,0 +1,100 @@
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700')
+
+/* COLORES */ 
+$color1: #e20613
+$color2: black
+$color3: #1d1d1b 
+ 
+
+body,html
+    font-family: Arial, Helvetica, sans-serif
+
+main.home
+    display: grid  
+    grid-template-areas: 'menu menu menu menu menu menu''slider slider slider slider slider slider''contacto contacto contacto contacto contacto contacto''footer footer footer footer footer footer'
+
+main.home > section
+    display: grid
+.container
+    width: 95%
+#menu
+    grid-area: menu
+
+#slider
+    grid-area: slider
+ 
+#contacto
+    grid-area: contacto
+
+#footer
+    grid-area: footer
+
+ 
+/* ETIQUETAS */
+h1
+    font-size: 40px
+h2
+    font-size: 35px
+h3
+    font-size: 30px
+h4
+    font-size: 25px
+h5
+    font-size: 20px
+h6
+    font-size: 15px
+
+/* CLASES */
+.color1
+    color: $color1
+.color2
+    color: $color2
+.color3
+    color: $color3
+
+.bg-c1
+    background: $color1
+.bg-c2
+    background: $color2
+.bg-c3
+    background: $color3
+
+/* BOTON */
+.btn
+    background-color: $color1
+    &:hover,&:active, &:focus
+        background-color: rgba($color1, 0.7)
+.ancla
+    position: fixed
+    bottom: 10px
+    right: 50px
+    z-index: 999
+    span 
+        @extend .bg-c2
+        border-radius: 50%
+        box-shadow: 0 0 10px rgba(0,0,0,0.4)
+        color: #ffffff 
+        width: 40px
+        height: 40px
+        align-items: center
+        justify-content: center
+        display: flex
+        cursor: pointer
+        &:hover
+            @extend .bg-c1
+
+
+
+@import 'sections/animate'
+@import 'sections/menu'  
+// @import 'sections/flip'
+@import 'sections/slider'
+@import 'sections/footer'
+@import 'sections/contacto' 
+// @import 'sections/unidades'
+// @import 'sections/canal' 
+// @import 'sections/testimonio'
+// @import 'sections/flyer'
+// @import 'sections/timeline'
+@import 'sections/nosotros'      
+// @import 'sections/proyectos'

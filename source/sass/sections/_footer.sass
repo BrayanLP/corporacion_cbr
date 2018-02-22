@@ -1,0 +1,39 @@
+
+/* FOOTER */
+footer 
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    display: grid
+    // align-items: center
+    justify-items: center
+    background: #20232e
+    padding: 3rem 0 5rem 0
+    position: relative
+    h3
+        font-size: 18px
+        color: #ffffff
+        font-weight: 300
+    h4, ul li
+        @extend .color3
+        margin: 0
+    h4
+        font-size: 16px
+    h5
+        font-size: 14px
+        @extend .color3 
+    ul
+        li
+            a
+                @extend .color3
+                &:hover
+                    @extend .color1
+    .copy
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 60px
+        line-height: 60px
+        text-align: center
+        @extend .color3
+        font-size: 13px
+        background: rgba(0,0,0,0.4)

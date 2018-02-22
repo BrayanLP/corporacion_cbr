@@ -1,0 +1,5 @@
+/node_modules
+.my.json
+.vscode
+/html
+/wp

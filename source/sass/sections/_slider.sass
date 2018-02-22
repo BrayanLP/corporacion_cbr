@@ -1,0 +1,75 @@
+/* SLIDER */
+#slider 
+    position: relative 
+    grid-template-columns: 1fr 
+    .slider-lp
+        display: grid
+        h2
+            position: absolute
+            // left: 50%
+            top: 40%
+            color: #ffffff
+            margin: 0
+            width: 100%
+            text-align: center
+            opacity: 0
+            @include translate(0%,-50%)
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4)
+    // .owl-carousel
+    //     .item
+    //         height: 380px
+    //         img
+    //             width: auto
+    //             height: 100%
+    //     .owl-pagination
+    //         display: inline-block
+    //         position: absolute
+    //         bottom: 19px
+    //         @include translate(-50%,0)
+
+.slick-slide
+    position: relative 
+    .opacity
+        opacity: 0
+
+.slick-arrow
+    position: absolute
+    top: 50%
+    @include translate(0, -50%)
+    z-index: 2
+    border: 0
+    background: transparent
+    &:focus, &:hover
+        background: transparent
+    i
+        font-size: 2rem
+        color: #ffffff
+        font-weight: bold
+        text-shadow: 0 1px 10px rgba(0,0,0,0.4)
+    &.slick-prev
+        left: 2rem
+    &.slick-next
+        right: 2rem
+ul.slick-dots
+    position: absolute
+    bottom: 1rem
+    left: 50%
+    text-align: center
+    @include translate(-50%, 0)
+    li
+        display: inline-block
+        margin: 0 5px
+        button 
+            border-radius: 50% 
+            font-size: 0
+            width: 20px
+            height: 20px
+            opacity: 0.7
+            border: 0
+            box-shadow: 0 2px 10px rgba(0,0,0,0.4)
+            @include transition(0.4s all)
+        &.slick-active
+            button
+                width: 25px
+                height: 25px
+                opacity: 1
