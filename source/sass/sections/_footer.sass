@@ -1,13 +1,25 @@
 
 /* FOOTER */
 footer 
-    grid-template-columns: 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr
     display: grid
     // align-items: center
     justify-items: center
-    background: #20232e
-    padding: 3rem 0 5rem 0
+    background: #ffffff
+    width: 100%
+    padding: 3rem 0
     position: relative
+    text-align: center
+    @extend .shadow
+    p
+        margin: 0
+        @extend .color3
+        a
+            font-weight: bold
+            @extend .color3
+    img
+        width: 200px
+        display: inline-block
     h3
         font-size: 18px
         color: #ffffff

@@ -2,8 +2,57 @@ section#slider
     .slider-lp
         -for(var i = 0; i < 2 ; i++)
             div
-                img(src="img/slider.png", alt="")
+                img(src="https://dummyimage.com/1280x500/9e9e9e/000", alt="")
+ 
 
-section#inicio
+section#productos
+    .container
+        .titulo
+            h2 
+                span
+                    |Sector Privado
+        ul.products.slick-productos.arrow-design
+            -for(var i = 0 ; i < 6 ; i++)
+                li.product
+                    a(href="#!")
+                        img(src="assets/images/producto.jpg", alt="")
+                        h2
+                            | Equipos de Computo
+                    .flotante
+                        a.btn.waves.waves-effect(href="http://")
+                            |Pedir cotización por 
+                            span.fa.fa-whatsapp
+        
+        .titulo
+            h2 
+                span
+                    |Sector Privado
+        ul.products.slick-productos.arrow-design
+            -for(var i = 0 ; i < 6 ; i++)
+                li.product
+                    a(href="#!")
+                        img(src="assets/images/producto.jpg", alt="")
+                        h2
+                            | Equipos de Computo
+                    .flotante
+                        a.btn.waves.waves-effect(href="http://")
+                            |Pedir cotización por 
+                            span.fa.fa-whatsapp
 
-section#contacto
+
+        .titulo
+            h2 
+                span
+                    |Sector Privado
+        ul.products.slick-productos.arrow-design
+            -for(var i = 0 ; i < 6 ; i++)
+                li.product
+                    a(href="#!")
+                        img(src="assets/images/producto.jpg", alt="")
+                        h2
+                            | Equipos de Computo
+                    .flotante
+                        a.btn.waves.waves-effect(href="http://")
+                            |Pedir cotización por 
+                            span.fa.fa-whatsapp
+

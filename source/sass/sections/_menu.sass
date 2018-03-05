@@ -4,12 +4,11 @@
 nav
     // background: linear-gradient(to left, $color1 , $color2) !important
     background: #ffffff
-    height: 90px
-    line-height: 45px
+    height: 90px 
+    line-height: 90px
     padding: 0 2rem
     z-index: 10
     box-shadow: 0 0 10px rgba(0,0,0,0.2)
-    border-bottom: 7px solid red
     .brand-logo
         img
             margin-top: 10px
@@ -64,8 +63,42 @@ nav
                         &:hover
                             // background: initial 
         &#nav-mobile
-            margin-top: 20px
+            // margin-top: 20px
  
 
 
                 
+.menu-top
+    height: 40px
+    line-height: 40px
+    background: $color1
+    color: #ffffff
+    .row
+        margin: 0 auto
+.redes
+    li
+        a
+
+            span
+                width: 30px
+                line-height: 30px
+                height: 30px
+                text-align: center
+                border-radius: 50%
+                display: block 
+                background: #ffffff
+                color: #000000
+                &.fa-facebook
+                    background: #3b5998
+                    color: #ffffff
+                &.fa-whatsapp
+                    background: #25d366
+                    color: #ffffff
+                &.fa-twitter
+                    background: blue
+
+.sub-menu
+    h2
+        @extend .color1
+        // font-size: px
+        padding: 2rem 0

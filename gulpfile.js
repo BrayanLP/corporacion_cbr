@@ -88,8 +88,8 @@ gulp.task('build:sass', function() {
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('./html/trammina/css'))
-    .pipe(gulp.dest('./wp/trammina/wp-content/themes/trammina/css'));
+    .pipe(gulp.dest('./html/assets/css'))
+    // .pipe(gulp.dest('./wp/trammina/wp-content/themes/trammina/css'));
 
 });
 
@@ -103,7 +103,7 @@ gulp.task('build:jade', function() {
       gutil.beep();
       this.emit('end');
     }))
-    .pipe(gulp.dest('./html/trammina'));
+    .pipe(gulp.dest('./html'));
 });
 
 // Procesamos todos los scripts y los agregamos en un solo archivo, ademas los verificamos para ver si hay incompatibilidades
@@ -119,7 +119,7 @@ gulp.task('build:js', function() {
       //Concatenamos en un solo archivo todos los JS
       .pipe(concat('app.min.js'))
       //ruta donde guardaremos el archivo
-      .pipe(gulp.dest('./html/trammina/js'))
+      .pipe(gulp.dest('./html/assets/js'))
       // .pipe(gulp.dest('./wp/trammina/wp-content/themes/trammina/js'))
 });
 
@@ -127,7 +127,7 @@ gulp.task('build:js', function() {
 function compileJade(file) {
 
   return gulp.src(file)
-    .pipe(changed('./html/trammina', {
+    .pipe(changed('./html', {
       extension: '.html'
     }))
     .pipe(gulpif(true, cached('jade')))
@@ -145,7 +145,7 @@ function compileJade(file) {
       gutil.beep();
       this.emit('end');
     }))
-    .pipe(gulp.dest('./html/trammina'))
+    .pipe(gulp.dest('./html'))
     .pipe(notify({
       message: "File <%= file.relative %> builded!"
     }));
@@ -183,7 +183,7 @@ function compileJade(file) {
 gulp.task('go-jade', function(){
 	return gulp.src('source/jade/**.jade')
 		.pipe(jade({ pretty: true }))
-		.pipe(gulp.dest('html/trammina'));
+		.pipe(gulp.dest('html'));
 });
 
 // Esto ejecuta solo una vez SASS Y JADE
@@ -195,7 +195,7 @@ gulp.task('watch',function(){
 		server: {
       baseDir: './'
     },
-		index:'html/trammina/index.html',
+		index:'html/index.html',
 		notify: true
 	});
 

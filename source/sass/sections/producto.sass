@@ -1,0 +1,69 @@
+#productos
+    grid-template-columns: 1fr
+    padding: 3rem 0  
+    
+    // grid-column: 1 / span 6
+.products
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1rem
+    li
+        @include transition(0.3s all)
+        position: relative
+        text-align: center
+        a
+            display: block
+            img
+                width: 100%
+                min-width: 230px
+                min-height: 230px
+            h2
+                background: #ffffff
+                padding: 1rem
+                font-size: 17px
+                text-align: center
+                @extend .color3
+                margin: 0
+                @include transition(0.5s all)
+        .flotante
+            position: absolute
+            top: 0
+            width: 100%
+            padding: 1rem
+            height: calc(100% - 52px) 
+            background: rgba(#000,0.4) 
+            display: none
+            a.btn
+                text-transform: capitalize
+                top: 50%
+                left: 50%
+                @include translate(-50%,-50%)
+                width: 100%
+                position: relative
+        &:hover
+            @extend .shadow
+            .flotante
+                display: block
+            h2
+                @extend .bg-c3
+                color: #ffffff
+    &.slick-productos
+        li
+            margin: 1rem
+.arrow-design
+    .slick-arrow
+        border: 3px solid $color3
+        border-radius: 50%
+        background: #ffffff
+        i
+            @extend .color3
+            text-shadow: none
+        &:hover
+            @extend .bg-c3
+            @extend .shadow
+            i
+                color: #ffffff
+        &.slick-next
+            right: -4rem
+        &.slick-prev
+            left: -4rem

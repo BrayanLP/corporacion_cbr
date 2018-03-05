@@ -1,22 +1,20 @@
 doctype html
 html(lang="es")
-    - var home = true
-    - var organization = true
-    include _partials/head
-    body.home
-        include _partials/mixins 
-        main#wrapper.home  
-
-            //- HEADER DEL SITIO
-            include _modules/header
-
-            //- MENU
-            include _modules/menu
-
+  - var home = true
+  - var organization = true
+  include _partials/head
+  body.home
+    include _partials/mixins  
+    #page.hfeed.site 
+      //- HEADER DEL SITIO
+      include _modules/header
+      #content.site-content(tabindex='-1') 
+        #primary.content-area
+          main#main.site-main(role='main')
+            //- header.entry-header
+            //-   h1.entry-title ¡Hola mundo!
             //- CARGA
             include _layouts/home 
             include _modules/footer
-            include _partials/footer
- 
- 
-
+            include _partials/footer 
+    // #page
