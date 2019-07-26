@@ -89,7 +89,7 @@ gulp.task('build:sass', function() {
     }).on('error', sass.logError))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./assets/css'))
-    // .pipe(gulp.dest('./wp/trammina/wp-content/themes/trammina/css'));
+    .pipe(gulp.dest('./../corporacion_cbr_theme/wp-content/themes/mitiendaonline/assets/css'));
 
 });
 
@@ -115,12 +115,12 @@ gulp.task('build:js', function() {
       //Los actualizamos para ser compatibles con la minificacion
       .pipe(ngAnnotate())
       //Los comprimimos
-      // .pipe(uglify())
+      .pipe(uglify())
       //Concatenamos en un solo archivo todos los JS
       .pipe(concat('app.min.js'))
       //ruta donde guardaremos el archivo
       .pipe(gulp.dest('./assets/js'))
-      // .pipe(gulp.dest('./wp/trammina/wp-content/themes/trammina/js'))
+      .pipe(gulp.dest('./../corporacion_cbr_theme/wp-content/themes/mitiendaonline/assets/js'))
 });
 
 

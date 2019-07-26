@@ -45,9 +45,19 @@ $(document).ready(function() {
         autoplay: true,
         infinite: true,
         speed: 500,
-        prevArrow:"<button type='button' class='slick-prev slick-arrow  '><i class='ga-left-arrow' aria-hidden='true'></i></button>",
-        nextArrow:"<button type='button' class='slick-next slick-arrow  '><i class=' ga-right-arrow' aria-hidden='true'></i></button>"
+        prevArrow:"<button type='button' class='slick-prev slick-arrow  '><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow:"<button type='button' class='slick-next slick-arrow  '><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
     });
+    $('.slick-productos').slick({
+        arrows: true,
+        dots: false, 
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        prevArrow:"<button type='button' class='slick-prev slick-arrow  '><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow:"<button type='button' class='slick-next slick-arrow  '><i class='fa fa-angle-right' aria-hidden='true'></i></button>"
+    });
+
     $('.slider-lp').on('beforeChange', function(event, slick, currentSlide, nextSlide){ 
         $('.slick-active .display').removeClass('hidden');
         $('.slick-active .display').removeClass(' fadeIn');
@@ -146,11 +156,22 @@ $(document).ready(function() {
  
 /* RECONOCER EL ACTIVE DEL MENU*/
 $(function() {
-    var pgurl = window.location.href.substr(window.location.href); 
+     
+    var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);  
+    
     $("nav ul li a").each(function(){
         if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
         $(this).addClass("active");
     })
+
+    var pgurl2 = window.location.href.substr(window.location.href);  
+    
+    $("nav ul li a").each(function(){
+        if($(this).attr("href") == pgurl2 || $(this).attr("href") == '' )
+        $(this).addClass("active");
+    })
+
+
 });
 $(document).on("scroll",function(){
     if($(document).scrollTop()> 530 && screen.width > 993 ){ 
@@ -160,3 +181,4 @@ $(document).on("scroll",function(){
         $(".navbar").removeClass("navbar-fixed"); 
     }  
 });
+console.log("test")
